@@ -1,4 +1,4 @@
-package com.engotg.creator.engotg;
+package com.engotg.creator.cpp;
 
 import org.junit.Test;
 

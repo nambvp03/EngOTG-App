@@ -1,4 +1,4 @@
-package com.engotg.creator.engotg;
+package com.engotg.creator.cpp;
 
 import android.app.Activity;
 import android.content.Context;
@@ -11,7 +11,6 @@ import android.speech.RecognizerIntent;
 import android.speech.SpeechRecognizer;
 import android.speech.tts.TextToSpeech;
 import android.speech.tts.UtteranceProgressListener;
-import android.speech.tts.Voice;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.CardView;
@@ -26,6 +25,8 @@ import android.view.Gravity;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.TextView;
+
+import com.engotg.creator.cpp.R;
 import com.tooltip.OnClickListener;
 import com.tooltip.OnDismissListener;
 import com.tooltip.Tooltip;

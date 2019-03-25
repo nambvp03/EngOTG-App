@@ -1,24 +1,27 @@
-package com.engotg.creator.engotg;
+package com.engotg.creator.cpp;
+
 import android.content.Context;
 import android.graphics.Typeface;
 import android.os.Build;
-import android.preference.ListPreference;
+import android.preference.CheckBoxPreference;
 import android.util.AttributeSet;
 import android.util.TypedValue;
 import android.view.View;
 import android.widget.TextView;
 
+import com.engotg.creator.cpp.R;
 
-public class AppListPreference extends ListPreference{
-    public AppListPreference(Context context){
+public class AppCheckBoxPreference extends CheckBoxPreference {
+
+    public AppCheckBoxPreference(Context context){
         super(context);
     }
 
-    public AppListPreference(Context context, AttributeSet attrs){
+    public AppCheckBoxPreference(Context context, AttributeSet attrs){
         super(context, attrs);
     }
 
-    public AppListPreference(Context context, AttributeSet attrs, int defStyle){
+    public AppCheckBoxPreference(Context context, AttributeSet attrs, int defStyle){
         super(context, attrs, defStyle);
     }
 
@@ -32,7 +35,7 @@ public class AppListPreference extends ListPreference{
         titleView.setTextColor(getContext().getResources().getColor(R.color.quizText));
         summaryView.setTypeface(typeface);
         summaryView.setTextColor(getContext().getResources().getColor(R.color.greyText));
-        if (Build.VERSION.SDK_INT <= Build.VERSION_CODES.LOLLIPOP_MR1) {
+        if (android.os.Build.VERSION.SDK_INT <= Build.VERSION_CODES.LOLLIPOP_MR1) {
             titleView.setTextSize(16);
         } else {
             titleView.setTextSize(TypedValue.COMPLEX_UNIT_PX, 60);

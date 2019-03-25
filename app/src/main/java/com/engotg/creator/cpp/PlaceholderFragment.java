@@ -1,13 +1,11 @@
-package com.engotg.creator.engotg;
+package com.engotg.creator.cpp;
 import android.content.Intent;
 import android.graphics.Typeface;
 import android.media.AudioAttributes;
-import android.media.AudioManager;
 import android.media.MediaMetadataRetriever;
 import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
-import android.os.Message;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -17,16 +15,12 @@ import android.widget.BaseAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import com.engotg.creator.engotg.AudioPlayer;
-import com.engotg.creator.engotg.R;
+import com.engotg.creator.cpp.R;
 
 import java.io.File;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-
-import static com.engotg.creator.engotg.AudioPlayer.createTimeLabel;
-import static com.engotg.creator.engotg.AudioPlayer.totalTime;
 
 public class PlaceholderFragment extends Fragment {
 
@@ -70,7 +64,7 @@ public class PlaceholderFragment extends Fragment {
             String durationStr = mmr.extractMetadata(MediaMetadataRetriever.METADATA_KEY_DURATION);
 
             int millisecond = Integer.parseInt(durationStr);
-            duration.setText(createTimeLabel(millisecond));
+            duration.setText(AudioPlayer.createTimeLabel(millisecond));
             duration.setTypeface(typeface);
             if(leftAudio.get(i).flag){
                 audioText.setTextColor(getResources().getColor(R.color.orange));
@@ -113,7 +107,7 @@ public class PlaceholderFragment extends Fragment {
             String durationStr = mmr.extractMetadata(MediaMetadataRetriever.METADATA_KEY_DURATION);
 
             int millisecond = Integer.parseInt(durationStr);
-            duration.setText(createTimeLabel(millisecond));
+            duration.setText(AudioPlayer.createTimeLabel(millisecond));
             duration.setTypeface(typeface);
             if(rightAudio.get(i).flag){
                 audioText.setTextColor(getResources().getColor(R.color.orange));
@@ -223,8 +217,8 @@ public class PlaceholderFragment extends Fragment {
                         mediaPlayer.start();
                         AudioPlayer.button_pause_play.setImageResource(R.drawable.ic_pause);
                         mediaPlayer.seekTo(0);
-                        totalTime = mediaPlayer.getDuration();
-                        AudioPlayer.seekbar.setMax(totalTime);
+                        AudioPlayer.totalTime = mediaPlayer.getDuration();
+                        AudioPlayer.seekbar.setMax(AudioPlayer.totalTime);
                         leftAudio.get(clickedPos).flag = false;
                         leftAudio.get(position).flag = true;
                         clickedPos = position;
@@ -259,8 +253,8 @@ public class PlaceholderFragment extends Fragment {
                         mediaPlayer.start();
                         AudioPlayer.button_pause_play.setImageResource(R.drawable.ic_pause);
                         mediaPlayer.seekTo(0);
-                        totalTime = mediaPlayer.getDuration();
-                        AudioPlayer.seekbar.setMax(totalTime);
+                        AudioPlayer.totalTime = mediaPlayer.getDuration();
+                        AudioPlayer.seekbar.setMax(AudioPlayer.totalTime);
                         rightAudio.get(clickedPos).flag = false;
                         rightAudio.get(position).flag = true;
                         clickedPos = position;

@@ -1,4 +1,4 @@
-package com.engotg.creator.engotg;
+package com.engotg.creator.cpp;
 
 import android.app.PendingIntent;
 import android.content.BroadcastReceiver;
@@ -26,8 +26,7 @@ import android.support.v4.media.session.MediaSessionCompat;
 import android.support.v4.media.session.PlaybackStateCompat;
 import android.text.TextUtils;
 
-import com.engotg.creator.engotg.MediaStyleHelper;
-import com.engotg.creator.engotg.R;
+import com.engotg.creator.cpp.R;
 
 import java.io.IOException;
 import java.util.List;

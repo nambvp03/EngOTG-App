@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context=".AudioPlayer">
+    tools:context="com.engotg.creator.cpp.AudioPlayer">
 
     <android.support.design.widget.AppBarLayout
         android:background="@color/quizText"

@@ -3,7 +3,7 @@ apply plugin: 'com.android.application'
 android {
     compileSdkVersion 27
     defaultConfig {
-        applicationId "com.engotg.creator.engotg"
+        applicationId "com.engotg.creator.cpp"
         minSdkVersion 21
         targetSdkVersion 27
         versionCode 3

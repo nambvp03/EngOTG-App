@@ -1,4 +1,4 @@
-package com.engotg.creator.engotg;
+package com.engotg.creator.cpp;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
@@ -21,6 +21,9 @@ import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.SeekBar;
 import android.widget.TextView;
+
+import com.engotg.creator.cpp.R;
+
 import java.io.File;
 import java.util.ArrayList;
 import java.util.Arrays;

@@ -1,24 +1,26 @@
-package com.engotg.creator.engotg;
-
+package com.engotg.creator.cpp;
 import android.content.Context;
 import android.graphics.Typeface;
 import android.os.Build;
-import android.preference.Preference;
+import android.preference.ListPreference;
 import android.util.AttributeSet;
 import android.util.TypedValue;
 import android.view.View;
 import android.widget.TextView;
 
-public class AppPreference extends Preference{
-    public AppPreference(Context context){
+import com.engotg.creator.cpp.R;
+
+
+public class AppListPreference extends ListPreference{
+    public AppListPreference(Context context){
         super(context);
     }
 
-    public AppPreference(Context context, AttributeSet attrs){
+    public AppListPreference(Context context, AttributeSet attrs){
         super(context, attrs);
     }
 
-    public AppPreference(Context context, AttributeSet attrs, int defStyle){
+    public AppListPreference(Context context, AttributeSet attrs, int defStyle){
         super(context, attrs, defStyle);
     }
 
@@ -32,7 +34,7 @@ public class AppPreference extends Preference{
         titleView.setTextColor(getContext().getResources().getColor(R.color.quizText));
         summaryView.setTypeface(typeface);
         summaryView.setTextColor(getContext().getResources().getColor(R.color.greyText));
-        if (android.os.Build.VERSION.SDK_INT <= Build.VERSION_CODES.LOLLIPOP_MR1) {
+        if (Build.VERSION.SDK_INT <= Build.VERSION_CODES.LOLLIPOP_MR1) {
             titleView.setTextSize(16);
         } else {
             titleView.setTextSize(TypedValue.COMPLEX_UNIT_PX, 60);

@@ -1,26 +1,27 @@
-package com.engotg.creator.engotg;
+package com.engotg.creator.cpp;
 
 import android.content.Context;
 import android.graphics.Typeface;
 import android.os.Build;
-import android.preference.CheckBoxPreference;
-import android.preference.Preference;
 import android.util.AttributeSet;
 import android.util.TypedValue;
 import android.view.View;
 import android.widget.TextView;
 
-public class AppCheckBoxPreference extends CheckBoxPreference {
+import com.engotg.creator.cpp.R;
 
-    public AppCheckBoxPreference(Context context){
+import gs.preference.SeekBarPreference;
+
+public class AppSeekBarPreference extends SeekBarPreference {
+    public AppSeekBarPreference(Context context){
         super(context);
     }
 
-    public AppCheckBoxPreference(Context context, AttributeSet attrs){
+    public AppSeekBarPreference(Context context, AttributeSet attrs){
         super(context, attrs);
     }
 
-    public AppCheckBoxPreference(Context context, AttributeSet attrs, int defStyle){
+    public AppSeekBarPreference(Context context, AttributeSet attrs, int defStyle){
         super(context, attrs, defStyle);
     }
 
@@ -36,8 +37,10 @@ public class AppCheckBoxPreference extends CheckBoxPreference {
         summaryView.setTextColor(getContext().getResources().getColor(R.color.greyText));
         if (android.os.Build.VERSION.SDK_INT <= Build.VERSION_CODES.LOLLIPOP_MR1) {
             titleView.setTextSize(16);
+            summaryView.setTextSize(12);
         } else {
             titleView.setTextSize(TypedValue.COMPLEX_UNIT_PX, 60);
+            summaryView.setTextSize(TypedValue.COMPLEX_UNIT_PX, 56);
         }
     }
 }

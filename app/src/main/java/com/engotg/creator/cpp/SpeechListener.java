@@ -1,4 +1,4 @@
-package com.engotg.creator.engotg;
+package com.engotg.creator.cpp;
 
 import android.os.Bundle;
 import android.speech.RecognitionListener;
@@ -6,7 +6,7 @@ import android.speech.SpeechRecognizer;
 import android.util.Log;
 import android.widget.TextView;
 
-import junit.framework.Test;
+import com.engotg.creator.cpp.R;
 
 import java.util.ArrayList;
 

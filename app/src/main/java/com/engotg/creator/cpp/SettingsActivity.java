@@ -1,4 +1,4 @@
-package com.engotg.creator.engotg;
+package com.engotg.creator.cpp;
 
 import android.app.Activity;
 import android.content.ComponentName;
@@ -7,8 +7,10 @@ import android.os.Bundle;
 import android.preference.ListPreference;
 import android.preference.Preference;
 import android.speech.tts.TextToSpeech;
-import android.speech.tts.Voice;
 import android.util.Log;
+
+import com.engotg.creator.cpp.R;
+
 import gs.preference.SeekBarPreference;
 import io.paperdb.Paper;
 
